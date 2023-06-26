@@ -1,0 +1,65 @@
+.center {
+  text-align: center;
+  padding: 1px;
+}
+
+.game_board {
+  --tic-tac-toe-cell-size: 100px;
+  --gap: 5px;
+  --column: 3;
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(
+    var(--tic-tac-toe-cell-size) * var(--column) + var(--gap) *
+      (var(--column) - 1)
+  );
+  gap: var(--gap);
+  margin: 50px auto 0;
+}
+
+.game_board .cell {
+  width: var(--tic-tac-toe-cell-size);
+  height: var(--tic-tac-toe-cell-size);
+  font-size: calc(var(--tic-tac-toe-cell-size) * 0.9);
+  line-height: calc(var(--tic-tac-toe-cell-size) * 0.9);
+  background: rgb(226, 226, 226);
+  border: 1px solid grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.game_board .cell:hover {
+  background: rgb(180, 226, 180);
+}
+
+.reset {
+  margin-top: 50px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.719);
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup.open {
+  display: flex;
+}
+
+.text_card {
+  width: 260px;
+  height: 110px;
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
